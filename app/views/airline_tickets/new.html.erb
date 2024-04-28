@@ -1,0 +1,11 @@
+<div class="container mt-5">
+  <%= simple_form_for [@flight, @airline_ticket] do |f| %>
+    <div class="d-flex justify-content-between w-100">
+      <%= f.input :price, label: "Preço da passagem", class: "w-75" %>
+      <%= f.input :discount, label: "Percentual de desconto", placeholder: "Ex: 5%", class: "w-75" %>
+    </div>
+    <%= f.input :origin, label: "Origem da passagem", collection: AirlineTicket.origins.values.sort %>
+    <%= f.input :ticket_type, label: "Tipo da passagem", collection: AirlineTicket.ticket_types.values.sort %>
+    <%= f.button :submit, class: "btn btn-success" %>
+  <% end %>
+</div>

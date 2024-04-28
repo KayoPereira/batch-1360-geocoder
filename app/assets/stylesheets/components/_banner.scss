@@ -1,0 +1,81 @@
+.img-banner {
+  height: 300px !important;
+  width: 100% !important;
+  border-radius: 10px;
+}
+
+.banner-carousel {
+  width: 70% !important;
+}
+
+.container-banner {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.card-airline {
+  background-color: #417377;
+  width: 30%;
+  height: 300px;
+  border-radius: 10px;
+  margin-left: 20px;
+  position: relative;
+
+  .text-card-airline h2 {
+    font-family: "Montserrat Subrayada";
+  }
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.text-banner {
+  position: absolute;
+}
+
+.travel-guy {
+  width: 230px;
+  height: 230px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.trip-one {
+  background-image: url('states/pernambuco.jpg');
+  background-size: cover;
+
+  h2 {
+    font-size: 50px;
+    font-family: "Notable", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+.trip-two {
+  background-image: url('states/rio grande do norte.jpg');
+  background-size: cover;
+
+  h2 {
+    font-size: 50px;
+    font-family: "Notable", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+.trip-three {
+  background-image: url('states/bahia.jpg');
+  background-size: cover;
+
+  h2 {
+    font-size: 50px;
+    font-family: "Notable", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+}

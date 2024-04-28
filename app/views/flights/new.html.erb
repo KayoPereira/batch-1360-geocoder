@@ -1,0 +1,11 @@
+<div class="container mt-5">
+  <%= simple_form_for @flight do |f| %>
+    <%= f.input :departure, label: 'Partida' %>
+    <%= f.input :arrival, label: 'Destino' %>
+    <%= f.input :vacancy, label: 'Vagas' %>
+    <%= f.input :aircraft, label: 'Modelo da aeronave', collection: Flight.aircrafts.values.sort %>
+    <%= f.input :day_and_hour, label: 'Dia e hora do vôo' %>
+
+    <%= f.button :submit %>
+  <% end %>
+</div>
