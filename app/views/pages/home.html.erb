@@ -1,2 +1,72 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <div class="search-bar mt-5">
+
+  </div>
+  <%= render "shared/ad" %>
+</div>
+<div class="container d-flex container-banner">
+
+  <div class="banner-carousel">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item carousel-item-one active">
+          <%# image_tag "states/pernambuco.jpg", class: "d-block img-banner" %>
+          <%# <div class="d-flex flex-column align-items-center justify-content-center text-banner">
+            
+          </div> %>
+          <div class="card-category img-banner trip-one d-flex flex-column justify-content-center align-items-center">
+            <h2 class="text-white">Recife</h2>
+            <h5 class="text-white">De <strong>R$450</strong> Por</h5>
+            <h3 class="text-white">R$355</h3>
+          </div>
+        </div>
+        <div class="carousel-item carousel-item-two">
+          <%# image_tag "states/rio grande do norte.jpg", class: "d-block img-banner" %>
+          <div class="card-category img-banner trip-two d-flex flex-column justify-content-center align-items-center">
+            <h2 class="text-white">Natal</h2>
+            <h5 class="text-white">De <strong>R$450</strong> Por</h5>
+            <h3 class="text-white">R$355</h3>
+          </div>
+        </div>
+        <div class="carousel-item carousel-item-three">
+          <%# image_tag "states/bahia.jpg", class: "d-block img-banner" %>
+          <div class="card-category img-banner trip-three d-flex flex-column justify-content-center align-items-center">
+            <h2 class="text-white">Bahia</h2>
+            <h5 class="text-white">De <strong>R$450</strong> Por</h5>
+            <h3 class="text-white">R$355</h3>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <div class="card-airline">
+    <div class="text-card-airline d-flex justify-content-center mt-3">
+      <h2 style="color: #a0c6ff;">STORK</h2>
+      <h2 class="text-white">AIRLINE</h2>
+    </div>
+    <%= image_tag "viajante.png", class: "travel-guy" %>
+  </div>
+</div>
+<div class="container">
+  <div class="row d-flex flex-wrap justify-content-center">
+    <% @flights.each do |flight| %>
+      <% unless flight.airline_tickets.empty? %>
+        <%= link_to flight_path(flight), class: "col-4 text-decoration-none" do %>
+          <div class="card-category bg-danger m-3 d-flex flex-column align-items-center justify-content-center card-trip" style="height: 300px; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path("states/pernambuco.jpg") %>)">
+            <h3 class="arrival-info"><%= flight.arrival %></h3>
+            <h5 class="card-info">a partir de</h5>
+            <h2 class="arrival-info">R$<%= flight.airline_tickets.pluck(:price).sort.first %></h2>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

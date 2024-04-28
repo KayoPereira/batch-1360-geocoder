@@ -1,0 +1,25 @@
+<h1>Detalhes do vôo:</h1>
+
+<ul>
+  <li>Partida: <%= @flight.departure %></li>
+  <li>Destino: <%= @flight.arrival %></li>
+  <li>Quantidade de lugares no avião: <%= @flight.vacancy %> lugares</li>
+  <li>Modelo do avião: <%= Flight.aircrafts[@flight.aircraft] %></li>
+  <li>Dia e Hora do vôo: <%= @flight.day_and_hour %></li>
+</ul>
+
+<h2>Passagens disponíveis:</h2>
+<div class="row">
+  <% @flight.airline_tickets.each do |ticket| %>
+    <div class="card col-2 mx-3 my-3">
+      <ul>
+        <li>Preço: <%= ticket.price %></li>
+        <li>Desconto: <%= ticket.discount %>
+        <li>Origem da passagem: <%= ticket.origin %></li>
+        <li>Tipo da passagem: <%= AirlineTicket.ticket_types[ticket.ticket_type] %>
+      </ul>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "Criar passagem", new_flight_airline_ticket_path(@flight) %>

@@ -1,0 +1,11 @@
+<h1>Vôos</h1>
+<ul>
+  <% @flights.each do |flight| %>
+    <li>
+      Partida: <%= flight.departure %> Destino: <%= flight.arrival %> 
+      <%= link_to "acessar", flight_path(flight) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Criar novo vôo", new_flight_path, class: "btn btn-primary" %>
