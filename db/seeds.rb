@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-TicketAirline.destroy_all
+AirlineTicket.destroy_all
 Flight.destroy_all
 User.destroy_all
 
@@ -21,7 +21,7 @@ admin.save!
 
 # client user
 client = User.new(email: "joão@client.com", password: "123123")
-admin.save!
+client.save!
 
 
 # ====================================================================
@@ -71,33 +71,33 @@ flight_7.save!
 
 puts "creating tickets..."
 
-TicketAirline.create!(price: 1000.00, discount: 10, origin: "azul", ticket_type: "economy", flight: flight_1)
-TicketAirline.create!(price: 1500.00, discount: 10, origin: "azul", ticket_type: "executive", flight: flight_1)
-TicketAirline.create!(price: 2000.00, discount: 10, origin: "azul", ticket_type: "first_class", flight: flight_1)
+AirlineTicket.create!(price: 1000.00, discount: 10, origin: "azul", ticket_type: "economy", flight: flight_1)
+AirlineTicket.create!(price: 1500.00, discount: 10, origin: "azul", ticket_type: "executive", flight: flight_1)
+AirlineTicket.create!(price: 2000.00, discount: 10, origin: "azul", ticket_type: "first_class", flight: flight_1)
 
-TicketAirline.create!(price: 560.00, discount: 10, origin: "gol", ticket_type: "economy", flight: flight_2)
-TicketAirline.create!(price: 1120.00, discount: 10, origin: "gol", ticket_type: "executive", flight: flight_2)
-TicketAirline.create!(price: 1900.00, discount: 10, origin: "gol", ticket_type: "first_class", flight: flight_2)
+AirlineTicket.create!(price: 560.00, discount: 10, origin: "gol", ticket_type: "economy", flight: flight_2)
+AirlineTicket.create!(price: 1120.00, discount: 10, origin: "gol", ticket_type: "executive", flight: flight_2)
+AirlineTicket.create!(price: 1900.00, discount: 10, origin: "gol", ticket_type: "first_class", flight: flight_2)
 
-TicketAirline.create!(price: 457.00, discount: 10, origin: "latam", ticket_type: "economy", flight: flight_3)
-TicketAirline.create!(price: 990.00, discount: 10, origin: "latam", ticket_type: "executive", flight: flight_3)
-TicketAirline.create!(price: 1537.00, discount: 10, origin: "latam", ticket_type: "first_class", flight: flight_3)
+AirlineTicket.create!(price: 457.00, discount: 10, origin: "latam", ticket_type: "economy", flight: flight_3)
+AirlineTicket.create!(price: 990.00, discount: 10, origin: "latam", ticket_type: "executive", flight: flight_3)
+AirlineTicket.create!(price: 1537.00, discount: 10, origin: "latam", ticket_type: "first_class", flight: flight_3)
 
-TicketAirline.create!(price: 560.00, discount: 10, origin: "gol", ticket_type: "economy", flight: flight_4)
-TicketAirline.create!(price: 1120.00, discount: 10, origin: "gol", ticket_type: "executive", flight: flight_4)
-TicketAirline.create!(price: 1900.00, discount: 10, origin: "gol", ticket_type: "first_class", flight: flight_4)
+AirlineTicket.create!(price: 560.00, discount: 10, origin: "gol", ticket_type: "economy", flight: flight_4)
+AirlineTicket.create!(price: 1120.00, discount: 10, origin: "gol", ticket_type: "executive", flight: flight_4)
+AirlineTicket.create!(price: 1900.00, discount: 10, origin: "gol", ticket_type: "first_class", flight: flight_4)
 
-TicketAirline.create!(price: 299.90, discount: 10, origin: "latam", ticket_type: "economy", flight: flight_5)
-TicketAirline.create!(price: 769.90, discount: 10, origin: "latam", ticket_type: "executive", flight: flight_5)
-TicketAirline.create!(price: 1459.90, discount: 10, origin: "latam", ticket_type: "first_class", flight: flight_5)
+AirlineTicket.create!(price: 299.90, discount: 10, origin: "latam", ticket_type: "economy", flight: flight_5)
+AirlineTicket.create!(price: 769.90, discount: 10, origin: "latam", ticket_type: "executive", flight: flight_5)
+AirlineTicket.create!(price: 1459.90, discount: 10, origin: "latam", ticket_type: "first_class", flight: flight_5)
 
-TicketAirline.create!(price: 899.90, discount: 10, origin: "azul", ticket_type: "economy", flight: flight_6)
-TicketAirline.create!(price: 1899.90, discount: 10, origin: "azul", ticket_type: "executive", flight: flight_6)
-TicketAirline.create!(price: 2599.90, discount: 10, origin: "azul", ticket_type: "first_class", flight: flight_6)
+AirlineTicket.create!(price: 899.90, discount: 10, origin: "azul", ticket_type: "economy", flight: flight_6)
+AirlineTicket.create!(price: 1899.90, discount: 10, origin: "azul", ticket_type: "executive", flight: flight_6)
+AirlineTicket.create!(price: 2599.90, discount: 10, origin: "azul", ticket_type: "first_class", flight: flight_6)
 
-TicketAirline.create!(price: 899.90, discount: 10, origin: "latam", ticket_type: "economy", flight: flight_7)
-TicketAirline.create!(price: 1899.90, discount: 10, origin: "latam", ticket_type: "executive", flight: flight_7)
-TicketAirline.create!(price: 2599.90, discount: 10, origin: "latam", ticket_type: "first_class", flight: flight_7)
+AirlineTicket.create!(price: 899.90, discount: 10, origin: "latam", ticket_type: "economy", flight: flight_7)
+AirlineTicket.create!(price: 1899.90, discount: 10, origin: "latam", ticket_type: "executive", flight: flight_7)
+AirlineTicket.create!(price: 2599.90, discount: 10, origin: "latam", ticket_type: "first_class", flight: flight_7)
 
 
 # ====================================================================
