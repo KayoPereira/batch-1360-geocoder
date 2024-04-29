@@ -60,10 +60,11 @@
     <% @flights.each do |flight| %>
       <% unless flight.airline_tickets.empty? %>
         <%= link_to flight_path(flight), class: "col-4 text-decoration-none" do %>
-          <div class="card-category bg-danger m-3 d-flex flex-column align-items-center justify-content-center card-trip" style="height: 300px; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path("states/pernambuco.jpg") %>)">
-            <h3 class="arrival-info"><%= flight.arrival %></h3>
+          <div class="card-category bg-danger m-3 d-flex flex-column align-items-center justify-content-center card-trip" style="height: 300px; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= flight.photo_link %>); background-size: cover;">
+            <h3 class="arrival-info"><%= "#{flight.departure}/#{flight.arrival}" %></h3>
             <h5 class="card-info">a partir de</h5>
-            <h2 class="arrival-info">R$<%= flight.airline_tickets.pluck(:price).sort.first %></h2>
+            <del><h5 class="arrival-info">R$<%= flight.airline_tickets.pluck(:price).sort.first %></h5></del>
+            <h2 class="arrival-info">R$<%= format('%.2f', (flight.airline_tickets.pluck(:price).sort.first - (flight.airline_tickets.pluck(:price, :discount).sort.first.first * flight.airline_tickets.pluck(:price, :discount).sort.first.second)/100)) %></h2>
           </div>
         <% end %>
       <% end %>

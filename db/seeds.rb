@@ -46,25 +46,67 @@ datas_aleatorias = []
   datas_aleatorias << data_hora_aleatoria
 end
 
-flight_1 = Flight.new(departure: "Recife", arrival: "Rio grande do norte", vacancy: 164, aircraft: "airbus_a320", day_and_hour: datas_aleatorias[0])
+flight_1 = Flight.new(departure: "Recife",
+                      arrival: "Rio grande do norte",
+                      vacancy: 164,
+                      aircraft: "airbus_a320",
+                      day_and_hour: datas_aleatorias[0],
+                      photo_link: "https://www.praiasdenatal.com.br/wp-content/uploads/2014/08/Natal-RN1.jpg"
+                    )
 flight_1.save!
 
-flight_2 = Flight.new(departure: "Rio grande do norte", arrival: "Bahia", vacancy: 156, aircraft: "boeing737", day_and_hour: datas_aleatorias[1])
+flight_2 = Flight.new(departure: "Rio grande do norte",
+                      arrival: "Bahia",
+                      vacancy: 156,
+                      aircraft: "boeing737",
+                      day_and_hour: datas_aleatorias[1],
+                      photo_link: "https://blog.luckreceptivo.com.br/wp-content/uploads/2016/12/salvador.jpg"
+                    )
 flight_2.save!
 
-flight_3 = Flight.new(departure: "Bahia", arrival: "Recife", vacancy: 178, aircraft: "boeing777", day_and_hour: datas_aleatorias[2])
+flight_3 = Flight.new(departure: "Bahia",
+                      arrival: "Recife",
+                      vacancy: 178,
+                      aircraft: "boeing777",
+                      day_and_hour: datas_aleatorias[2],
+                      photo_link: "https://deonibus.com/blog/wp-content/uploads/2021/03/cidade-perto-de-recife.jpg"
+                    )
 flight_3.save!
 
-flight_4 = Flight.new(departure: "Bahia", arrival: "Rio grande do norte", vacancy: 156, aircraft: "boeing737", day_and_hour: datas_aleatorias[3])
+flight_4 = Flight.new(departure: "Bahia",
+                      arrival: "Rio grande do norte",
+                      vacancy: 156,
+                      aircraft: "boeing737",
+                      day_and_hour: datas_aleatorias[3],
+                      photo_link: "https://www.praiasdenatal.com.br/wp-content/uploads/2014/08/Natal-RN1.jpg"
+                    )
 flight_4.save!
 
-flight_5 = Flight.new(departure: "Rio de Janeiro", arrival: "São Paulo", vacancy: 180, aircraft: "airbus_a330", day_and_hour: datas_aleatorias[4])
+flight_5 = Flight.new(departure: "Rio de Janeiro",
+                      arrival: "São Paulo",
+                      vacancy: 180,
+                      aircraft: "airbus_a330",
+                      day_and_hour: datas_aleatorias[4],
+                      photo_link: "https://ecrie70.com.br/sistema/conteudos/imagem/g_66_0_1_06062023152401.png"
+                    )
 flight_5.save!
 
-flight_6 = Flight.new(departure: "São Paulo", arrival: "Recife", vacancy: 203, aircraft: "boeing747", day_and_hour: datas_aleatorias[5])
+flight_6 = Flight.new(departure: "São Paulo",
+                      arrival: "Recife",
+                      vacancy: 203,
+                      aircraft: "boeing747",
+                      day_and_hour: datas_aleatorias[5],
+                      photo_link: "https://deonibus.com/blog/wp-content/uploads/2021/03/cidade-perto-de-recife.jpg"
+                    )
 flight_6.save!
 
-flight_7 = Flight.new(departure: "Rio de Janeiro", arrival: "Recife", vacancy: 198, aircraft: "boeing747", day_and_hour: datas_aleatorias[6])
+flight_7 = Flight.new(departure: "Rio de Janeiro",
+                      arrival: "Recife",
+                      vacancy: 198,
+                      aircraft: "boeing747",
+                      day_and_hour: datas_aleatorias[6],
+                      photo_link: "https://deonibus.com/blog/wp-content/uploads/2021/03/cidade-perto-de-recife.jpg"
+                    )
 flight_7.save!
 
 # ====================================================================

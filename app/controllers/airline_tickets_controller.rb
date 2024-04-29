@@ -1,5 +1,5 @@
 class AirlineTicketsController < ApplicationController
-  before_action :set_flight, only: %i[index create new]
+  before_action :set_flight, only: %i[index create new edit]
   before_action :set_airline_ticket, only: [:show]
 
   def index
@@ -24,6 +24,16 @@ class AirlineTicketsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    @airline_ticket = AirlineTicket.find(params[:id])
+  end
+
+  def update
+    @airline_ticket = AirlineTicket.find(params[:id])
+    @airline_ticket.update(airline_ticket_params)
+    redirect_to my_flights_path
   end
 
   def destroy

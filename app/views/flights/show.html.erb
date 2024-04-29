@@ -18,6 +18,7 @@
         <li>Origem da passagem: <%= ticket.origin %></li>
         <li>Tipo da passagem: <%= AirlineTicket.ticket_types[ticket.ticket_type] %>
       </ul>
+      <%= link_to "Editar passagem", edit_flight_airline_ticket_path(@flight, ticket) %>
     </div>
   <% end %>
 </div>
