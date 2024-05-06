@@ -2,7 +2,11 @@ class FlightsController < ApplicationController
   before_action :set_flight, only: %i[show destroy]
 
   def index
-    @flights = Flight.all
+    if params[:origin].present?
+      @flights = Flight.where('lower(departure) = ?', params[:origin].downcase)
+    else 
+      @flights = Flight.all
+    end
   end
 
   def show
@@ -28,6 +32,10 @@ class FlightsController < ApplicationController
       flash[:error] = "Erro ao remover o vôo."
     end
   end
+
+  # def search_flights
+    # @flights = Flight.where()
+  # end
 
   private
 

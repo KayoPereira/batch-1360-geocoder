@@ -1,0 +1,51 @@
+<div class="d-flex justify-content-center w-100">
+  <div id="container-inputs" class="d-flex" data-search-target="container">
+    <div class="d-flex align-items-end" id="origin-city">
+      <i class="fa-regular fa-circle mb-2" style="color: #868686;"></i>
+      <div class="d-flex flex-column ms-3">
+        <label>ORIGEM</label>
+        <input class="w-100" placeholder="Insira sua cidade de partida" data-action="keyup->search#searchOrigin" data-search-target="inputOrigin">
+      </div>
+    </div>
+    <button style="color: #868686;">
+      <i class="fa-solid fa-arrow-right-arrow-left"></i>
+    </button>
+    <div class="d-flex align-items-end" id="arrival-city">
+      <i class="fa-solid fa-location-dot mb-2" style="color: #868686;"></i>
+      <div class="d-flex flex-column ms-3">
+        <label>DESTINO</label>
+        <input class="w-100" placeholder="Insira sua cidade de destino" >
+      </div>
+    </div>
+  </div>
+
+  <div id="container-days" class="d-flex">
+    <div class="d-flex align-items-end" id="going-date">
+      <i class="fa-regular fa-calendar-days mb-2" style="color: #868686;"></i>
+      <div class="d-flex flex-column ms-3">
+        <label>DATA DE IDA</label>
+        <input class="w-100" placeholder="Ida" id="going">
+      </div>
+    </div>
+    <div class="d-flex align-items-end" id="back-date">
+      <div class="d-flex flex-column ms-3">
+        <label>DATA DE VOLTA</label>
+        <input class="w-100" placeholder="Volta" id="back">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const origin = document.querySelector('#origin-city input');
+  const arrival = document.querySelector('#arrival-city input');
+  const button = document.querySelector('#container-inputs button');
+
+  button.addEventListener('click', () => {
+    const originValue = origin.value;
+    const arrivalValue = arrival.value;
+
+    origin.value = arrivalValue;
+    arrival.value = originValue;
+  });
+</script>

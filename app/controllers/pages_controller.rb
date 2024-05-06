@@ -1,5 +1,10 @@
 class PagesController < ApplicationController
   def home
-    @flights = Flight.all
+    if params[:origin].present?
+      @flights = Flight.where('lower(departure) = ?', params[:origin].downcase)
+      render :json => @flights
+    else 
+      @flights = Flight.all
+    end
   end
 end
