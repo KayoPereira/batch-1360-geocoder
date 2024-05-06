@@ -55,7 +55,7 @@
     <%= image_tag "viajante.png", class: "travel-guy" %>
   </div>
 </div>
-<div class="container">
+<div class="container d-flex flex-column align-items-center">
   <div class="row d-flex flex-wrap justify-content-center">
     <% @flights.each do |flight| %>
       <% unless flight.airline_tickets.empty? %>
@@ -70,4 +70,5 @@
       <% end %>
     <% end %>
   </div>
+  <%= link_to "Ver todas as ofertas", flights_path, class: "btn btn-primary mt-5 mb-5" %>
 </div>

@@ -6,6 +6,6 @@
     <%= f.input :aircraft, label: 'Modelo da aeronave', collection: Flight.aircrafts.values.sort %>
     <%= f.input :day_and_hour, label: 'Dia e hora do vôo' %>
 
-    <%= f.button :submit %>
+    <%= f.button :submit, class: "btn btn-success" %>
   <% end %>
 </div>
